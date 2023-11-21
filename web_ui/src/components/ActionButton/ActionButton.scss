@@ -1,0 +1,16 @@
+.actn-btn:hover {
+    background-color: rgb(245, 88, 88);
+}
+
+.actn-btn {
+    margin-top: 25px;
+    height: 45px;
+    width: 45px;
+    background-color: var(--he-inspire-red);
+    color: var(--he-inspire-white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+}

@@ -1,0 +1,29 @@
+# UI dependencies
+web_ui/node_modules
+web_ui/.pnp
+web_ui.pnp.js
+
+# testing
+web_ui/coverage
+
+# production
+web_ui/build
+
+# misc
+web_ui/.DS_Store
+web_ui/.env.local
+web_ui/.env.development.local
+web_ui/.env.test.local
+web_ui/.env.production.local
+
+web_ui/npm-debug.log*
+web_ui/yarn-debug.log*
+web_ui/yarn-error.log*
+
+
+# API
+web_api/.config
+web_api/.vs
+web_api/bin
+web_api/obj
+
