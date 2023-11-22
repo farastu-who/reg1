@@ -1,12 +1,15 @@
 import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import './Breadcrumb.scss'
 import { BreadcrumbComponent, BreadcrumbItemDirective, BreadcrumbItemsDirective } from '@syncfusion/ej2-react-navigations';
 
-export const Breadcrumb = ({location}) => {
+export const Breadcrumb = () => {
+
+    const location = useLocation();
 
     useEffect(() => {
-        console.log('Location has changed:', location.pathname);
-      }, [location]);
+
+    },[location])
 
     const breadcrumbDirectives = () => {
         // Split the path by '/' characters
@@ -20,10 +23,9 @@ export const Breadcrumb = ({location}) => {
             if(part !== ''){
                 const basePath = 'http://localhost:3000'
                 const urlPath = `${basePath}${parts.slice(0, index + 1).join('/')}`;
-                console.log(urlPath)
 
                 return(
-                    <BreadcrumbItemDirective text={part} url={urlPath}/>
+                    <BreadcrumbItemDirective key={index} text={part} url={urlPath}/>
                 );
             }else{
                 return null

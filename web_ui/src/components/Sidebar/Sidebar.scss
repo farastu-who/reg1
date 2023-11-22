@@ -1,0 +1,45 @@
+.cstm-sidebar-open {
+    width: 300px; /* Adjust the width as needed */
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--he-inspire-white); /* Sidebar background color */
+    color: var(--he-inspire-grey); /* Text color in the sidebar */
+    padding: 20px;
+    transition: 0.6s ease;
+    z-index: 9999; /* Assign a high z-index value */
+    border-right: grey 1px solid;
+    
+    /* Set a fixed height for the sidebar and enable vertical scrolling */
+    height: 100%;
+    overflow-y: auto;
+
+    .sidebar-content {
+        display: flex;
+        flex-direction: column;
+        margin: 20px 0;
+        text-align: left;
+
+        #close-btn {
+            width: 30px;
+            height: 30px;
+            margin-right: 0;
+            margin-left: auto;
+            background-color: transparent;
+            font-weight: bold;
+            border-radius: 15px;
+
+            &:hover {
+                color: var(--he-inspire-white);
+                background-color: var(--he-inspire-red);
+            }
+        }
+
+        button {
+            width: 50%;
+            margin: 20px 0;
+            border-style: none;
+        }
+    }
+}

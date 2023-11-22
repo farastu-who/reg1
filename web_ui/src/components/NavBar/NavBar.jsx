@@ -1,11 +1,18 @@
 import './NavBar.scss'
 import logo from '../../assets/hitachi-energy-mark-red.svg'
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 
-export default function NavBar ({location}) {
+export const NavBar = () =>  {
+
+  const location = useLocation();
+
+  useEffect(() => {
+
+  },[location])
 
     return (
-        <div className="NavBar">
+        <div id="nav-bar">
 
         {/* Hitachi Energy logo */}
         <Link to='/about'>

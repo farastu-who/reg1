@@ -7,7 +7,7 @@ import App from './App';
 // import reportWebVitals from './reportWebVitals'
 
 // Registering Syncfusion license key
-registerLicense('ORg4AjUWIQA/Gnt2VlhhQlJCfV5AQmBIYVp/TGpJfl96cVxMZVVBJAtUQF1hSn9TdEViXH9XdXRQT2RZ');
+registerLicense('ORg4AjUWIQA/Gnt2VlhhQlJCfV5AQmBIYVp/TGpJfl96cVxMZVVBJAtUQF1hSn9TdEJiUH5YcHJcQGZf');
 
 const root = ReactDOM.createRoot(document.getElementById('WebApp'));
 

@@ -9,5 +9,7 @@ namespace web_api.Services
         IList<Company> Get(int id);
         IList<Company> Get(string name);
         //int Update(Company company);
+
+        // Additional methods for updating, deleting, etc., can be added here
     }
 }

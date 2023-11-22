@@ -1,4 +1,3 @@
-import './Products.scss'
 import { ColumnDirective, ColumnsDirective, GridComponent, Toolbar, ExcelExport, Inject} from '@syncfusion/ej2-react-grids';
 
 export const Products = () => {
@@ -25,13 +24,13 @@ export const Products = () => {
         }
     ]
 
-    let grid;
-    const toolbar = ['ExcelExport'];
+    let grid
+    const toolbar = ['ExcelExport']
     const toolbarClick = (args) => {
         if (grid && args.item.id === 'grid_excelexport') {
             grid.excelExport();
         }
-    };
+    }
 
 
     return(
@@ -50,5 +49,3 @@ export const Products = () => {
         </div>
     )
 }
-
-export default Products;
