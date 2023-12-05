@@ -1,18 +1,15 @@
-using web_api.Services.RegistrationDb;
+﻿using web_api.Services.RegistrationDb;
 
 namespace web_api.Services
 {
     public interface IProductRepository
     {
-        // Get all products
-        IList<Product> GetAllProducts();
+        IList<Product> GetAll();
 
-        // Get a single product by ID
-        Product GetProductById(int id);
+        IList<Product> GetById(int id);
 
-        // Get products by name
-        IList<Product> GetProductsByName(string name);
+        int Create(Product product);
 
-        // Additional methods for updating, deleting, etc., can be added here
+        int Update(Product product);
     }
 }

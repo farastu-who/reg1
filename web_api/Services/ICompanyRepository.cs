@@ -1,15 +1,17 @@
-﻿using web_api.Services.RegistrationDb;
+﻿using web_api.DTO;
 
 namespace web_api.Services
 {
     public interface ICompanyRepository
     {
-        // get all companies
-        IList<Company> Get();
-        IList<Company> Get(int id);
-        IList<Company> Get(string name);
-        //int Update(Company company);
+        IList<CompanyDto> GetAll();
 
-        // Additional methods for updating, deleting, etc., can be added here
+        CompanyDto GetById(int id);
+        
+        CompanyDto GetByName(string name);
+        
+        int Create(CompanyDto CompanyDTO);
+        
+        int Update(CompanyDto CompanyDTO);
     }
 }

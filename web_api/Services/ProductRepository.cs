@@ -1,5 +1,5 @@
-using System.Linq;
-using web_api.Services.RegistrationDb;
+﻿using web_api.Services.RegistrationDb;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace web_api.Services
 {
@@ -9,24 +9,34 @@ namespace web_api.Services
 
         public ProductRepository(RegistrationDbContext registrationDbContext)
         {
+
             _registrationDbContext = registrationDbContext;
         }
 
-        public IList<Product> GetAllProducts()
+
+        public int Create(Product product)
+        {
+            _registrationDbContext.Product.Add(product);
+
+            return _registrationDbContext.SaveChanges();
+        }
+
+        public IList<Product> GetAll()
         {
             return _registrationDbContext.Product.ToList();
         }
 
-        public Product GetProductById(int id)
+        public IList<Product> GetById(int id)
         {
-            return _registrationDbContext.Product.FirstOrDefault(p => p.Id == id);
+            return _registrationDbContext.Product.Where(p => p.Id == id).ToList();
         }
 
-        public IList<Product> GetProductsByName(string name)
+        public int Update(Product product)
         {
-            return _registrationDbContext.Product.Where(p => p.Name == name).ToList();
-        }
+            var updated = _registrationDbContext.Product.Attach(product);
+            updated.State = Microsoft.EntityFrameworkCore.EntityState.Modified;
 
-        // Additional methods for updating, deleting, etc., can be implemented here
+            return _registrationDbContext.SaveChanges();
+        }
     }
 }
